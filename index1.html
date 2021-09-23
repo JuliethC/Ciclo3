@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/estilo1.css"   />
+    <script src="https://kit.fontawesome.com/84366ae6c0.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 <body>
 </head>
@@ -16,7 +19,7 @@
         <a href="index.html" title="Ir a la página principal">
             <img src="imagenes/logo1 - copia.png" alt="Apple"/>
         </a>
-        <nav>
+        <nav id="menu">
         <!-- Crear o declarar lista-->
             <ul>
                 <!-- Crear items a la lista-->
@@ -31,27 +34,359 @@
         <center>
             <h1>Crear Formulario</h1>
             <br/>
-            <br/>
-            <br/>
-            <form>
-                <label>Nombre: </label>
-                <input type="text" name:"txtNombre"
-                    maxlength="10" size"40" required><br/><br/>
-                <label>Edad: </label>    
-                <input type="number" name:"txtEdad" min=0 max=150 size=40><br/><br/>
-                <label>Fecha nacimiento: </label>
-                <input type="date" name:"txtFecha"><br/><br/>
-                <label>Correo electronico: </label>
-                <input type="email" name:"txtCorreo"><br/><br/>
-                <input type="submit" value="Grabar">
+            <form class="formulario">
+                <label class="diseñoLabel" for="nombre">Nombre: </label>
+                <input class="diseñoInput" type="text" id="nombre"name:"txtNombre" placeholder="Ingresar nombre"
+                    maxlength="10"> <br/><br/>
+                <label class="diseñoLabel" for="edad">Edad: </label>    
+                <input class="diseñoInput" type="number" id="edad" name:"txtEdad" min=0 max=150 size=40><br/><br/>
+                <label class="diseñoLabel">Fecha nacimiento: </label>
+                <input class="diseñoInput" type="date" name:"txtFecha"><br/><br/>
+                <label class="diseñoLabel">Correo electronico: </label>
+                <input class="diseñoInput" type="email" name:"txtCorreo"><br/><br/>
+                <label class="diseñoLabel">Seleccionar documento: </label>
+                <select class="diseñoInput" name="tipoDocumento"> 
+                    <option value="" selected="true">Seleccionar documento</option>
+                    <option value="CC">Cedula de ciudadania</option>
+                    <option value="TI">Tarjeta de identidad</option>
+                    <option value="CE">Cedula extranjeria</option>
+                </select><br/><br/>
+                <label class="diseñoLabel">Ingresar observaciones: </label>
+                <textarea class="diseñoInput" name="observaciones" rows=3 cols=50>
+                </textarea>
+                <br/><br/>
+                <label class="diseñoLabel">Ingresar género: </label>
+                <label>Masculino: </label><input  type="radio" name="genero" value="Masculino">
+                <label>Femenino: </label><input  type="radio" name="genero" value="Femenino">                  
+                <br/><br/>
+                <label class="diseñoLabel">Ingresar materias: </label>
+                <label>Matematicas</label>
+                <input  type="checkbox" name="materias" value="matematicas" checked>
+                <label>Fisica</label>
+                <input  type="checkbox" name="materias" value="fisica" checked>   
+                <br/><br/>   
 
+                <center>
+                <input class="botonFormulario" type="submit" value="Grabar"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input class="botonFormulario" type="submit" value="Cancelar">
+                </center>
             </form>
+            <br/> 
+            <h1>LISTADO DE MATERIAS EN LA SEMANA</h1>  
+            <table class="estiloTabla">
+                <tr>
+                    <th>MATERIA</th>
+                    <th>LUNES</th>
+                    <th>MARTES</th>
+                    <th>MIERCOLES</th>
+                    <th>JUEVES</th>
+                    <th>VIERNES</th>
+                </tr>
+                <tr>
+                    <td>FISICA</td>
+                    <td></td>
+                    <td>8-10AM.</td>
+                    <td></td>
+                    <td>8-10AM.</td>
+                    <td></td>
+                </tr>
+            </table> 
+            <br/>
+            <br/>
 
         </center>   
 
 
     </main> 
+
     <footer>
+        <center>
+        <div class="cajaGrande">
+            <div class="cajaMorada">
+                <div class="cajaNaranja"><h1>Titulo1</h1></div>
+                <div class="cajaAmarilla"><i class="icono1 fab fa-app-store"></i></div>
+            </div>  
+            <div class="cajaAzulOscuro">
+                <div class="cajaAzul"> 
+                    <p>prueba1</p>
+                    <p>prueba2</p>
+                    <p>prueba3</p>
+                </div>
+                <div class="cajaVerde">
+                    <p>prueba1</p>
+                    <p>prueba2</p>
+                    <p>prueba3</p>
+                </div>
+            </div> 
+            <div class="cajaRoja">
+                <button class="diseño_boton">Guardar</button>
+            </div>
+        </div>   
+
+        <div class="cajaGrande">
+            <div class="cajaMorada">
+                <div class="cajaNaranja"><h1>Titulo1</h1></div>
+                <div class="cajaAmarilla"><i class="icono1 fab fa-app-store"></i></div>
+            </div>  
+            <div class="cajaAzulOscuro">
+                <div class="cajaAzul"> 
+                    <p id="parrafoPruebas1">prueba1</p>
+                    <p>prueba2</p>
+                    <p>prueba3</p>
+                </div>
+                <div class="cajaVerde">
+                    <p>prueba1</p>
+                    <p>prueba2</p>
+                    <p>prueba3</p>
+                </div>
+            </div> 
+            <div class="cajaRoja">
+                <button class="diseño_boton">Guardar</button>
+            </div>
+        </div>  
+        
+        <div class="cajaGrande">
+            <div class="cajaMorada">
+                <div class="cajaNaranja"><h1>Titulo1</h1></div>
+                <div class="cajaAmarilla"><i class="icono1 fab fa-app-store"></i></div>
+            </div>  
+            <div class="cajaAzulOscuro">
+                <div class="cajaAzul"> 
+                    <p>prueba1</p>
+                    <p>prueba2</p>
+                    <p>prueba3</p>
+                </div>
+                <div class="cajaVerde">
+                    <p>prueba1</p>
+                    <p>prueba2</p>
+                    <p>prueba3</p>
+                </div>
+            </div> 
+            <div class="cajaRoja">
+                <button class="diseño_boton">Guardar</button>
+            </div>
+        </div>
+    </center>
+
+  
+
+    </footer>
+
+    <div class="container">
+        <div class="row">
+            <div class="alinear_logo col-12 col-md-6 col-xl-4">
+                <a href="index.html" title="ir a pagina principal">
+                    <img src="imagenes/logo1 - copia.png" alt="nombre de la empresa" />
+                </a>
+            </div>
+            <div class="alinear_logo col-12 col-md-6 col-xl-3">
+                <p class="fs-1">Nombre del proyecto</p>
+            </div>
+            <div class="col-12 col-md-6 col-xl-5">
+                <ul class="nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled">Disabled</a>
+                    </li>
+                  </ul>
+            </div>
+        </div>
+    </div>
+<br /><br /><br />
+    <form class="form-register">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <label class="form-label" id="label_nombre" for="nombre">Nombre: </label>
+                    <input class="form-control" type="text" id="nombre" name="txtNombre" placeholder="Ingresar nombre" 
+                        maxlength="10" required>
+                </div>
+                <div class="col-12 col-md-6">
+                    <label class="form-label" for="edad">Edad: </label>
+                    <input class="form-control" type="number" id="edad" name="txtEdad" min=0 max=150>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <label class="form-label">Fecha nacimiento: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input class="form-control" type="date" name="txtFecha">
+                </div>
+                <div class="col-12 col-md-4">
+                    <label class="form-label">Correo electronico: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input class="form-control" type="email"  name="txtCorrreo">
+                </div>
+                <div class="col-12 col-md-4">
+                    <label class="form-label">Seleccionar Documento: </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select class="form-control" name="tipo_documento">
+                        <option value="" selected="true">Seleccionar nombre</option>
+                        <option value="CC">Cedula de ciudadania</option>
+                        <option value="TI">Tarjeta de identidad</option>
+                        <option value="CE">Cedula extranjeria</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">            
+                    <button type="button" class="btn btn-danger">Guardar</button>
+                </div>
+                <div class="col-12 col-md-6">            
+                    <button type="button" class="btn btn-danger">Cancelar</button>
+                </div>
+            </div>  
+        </div>
+        </div>
+    </form>
+
+    <div class="container">
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table table-primary table-striped table-hover">
+                    <tr>
+                        <th>MATERIA</th>                    
+                        <th>LUNES</th>
+                        <th>MARTES</th>
+                        <th>MIERCOLES</th>
+                        <th>JUEVES</th>
+                        <th>VIERNES</th>
+                    </tr>
+                    <tr>
+                        <td>FISICA</td>
+                        <td></td>
+                        <td>8-10 AM</td>
+                        <td></td>
+                        <td>8-10 AM</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>MATEMATICAS</td>
+                        <td></td>
+                        <td class="table-warning">8-10 AM</td>
+                        <td></td>
+                        <td>8-10 AM</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>FISICA</td>
+                        <td></td>
+                        <td>8-10 AM</td>
+                        <td></td>
+                        <td>8-10 AM</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>MATEMATICAS</td>
+                        <td></td>
+                        <td class="table-warning">8-10 AM</td>
+                        <td></td>
+                        <td>8-10 AM</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="b-example-divider"></div>
+
+
+<div class="container">
+  <footer class="py-5">
+    <div class="row">
+      <div class="col-2">
+        <h5>Integrantes</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-2">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-2">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+        </ul>
+      </div>
+
+      <div class="col-4 offset-1">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <p>Monthly digest of whats new and exciting from us.</p>
+          <div class="d-flex w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between py-4 my-4 border-top">
+      <p>&copy; 2021 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+<form id="formulario-suma">
     
+    
+    <div class="container">
+        <h1>Realizar suma</h1>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <label for="numero1" class="form-label">Ingresar Numero 1</label>
+                <input type="number" class="form-control" id="numero1" name="numero1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <label for="numero2" class="form-label">Ingresar Numero 2</label>
+                <input type="number" class="form-control" id="numero2" name="numero2">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <button type="button" class="btn btn-warning" onclick="operacionesMatematicas()">Realizar operaciones</button>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    
+    <script src="js/primerJS.js"></script>
+
 </body>
 </html>
